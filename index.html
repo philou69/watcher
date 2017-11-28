@@ -1,0 +1,31 @@
+<!DOCTYPE htlml>
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<form id="select-file">
+			<div id="error"></div>
+			<label for="movie">Choose your vidéo</label>
+			<input type="file" id="movie" accept="video/mp4,.mp4,
+video/avi,.avi,
+video/mpeg,.mpeg,.mpg,
+video/3gpp,.3gp,.divx,
+video/x-flv,.flv,
+video/x-matroska,.mkv,
+video/quicktime,.mov,
+audio/ogg,.ogg,
+video/webm,.webm,
+video/x-ms-wmv,.wmv"><br>
+			<label for="subtitle">Select subtitle file (.vtt)</label>
+			<input type="file" name="subtitle" id="subtitle" accept=".vtt"><br>
+			<button type="submit">Lire</button>	
+		</form>
+		
+		<video id="player" width="320" height="240" controls >
+
+		</video>
+
+		<script src="main.js"></script>
+	</body>
+</html>
