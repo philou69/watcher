@@ -1,31 +1,64 @@
 <!DOCTYPE htlml>
 <html>
-	<head>
-		<meta charset="utf-8">
-	</head>
-	<body>
-		<form id="select-file">
-			<div id="error"></div>
-			<label for="movie">Choose your vidéo</label>
-			<input type="file" id="movie" accept="video/mp4,.mp4,
-video/avi,.avi,
-video/mpeg,.mpeg,.mpg,
-video/3gpp,.3gp,.divx,
-video/x-flv,.flv,
-video/x-matroska,.mkv,
-video/quicktime,.mov,
-audio/ogg,.ogg,
-video/webm,.webm,
-video/x-ms-wmv,.wmv"><br>
-			<label for="subtitle">Select subtitle file (.vtt)</label>
-			<input type="file" name="subtitle" id="subtitle" accept=".vtt"><br>
-			<button type="submit">Lire</button>	
-		</form>
-		
-		<video id="player" width="320" height="240" controls >
+<head>
+	<meta charset="utf-8">
+	<title>CastWatcher</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
 
-		</video>
 
-		<script src="main.js"></script>
-	</body>
+	<section id="watcher">
+		<div class="container" >
+			<h1>CastWatcher</h1>
+			<p>
+				For chromecasting local video that navigator don't read.
+			</p>
+			<form id="select-file" class="form-horizontal">
+				<div id="error"></div>
+				<div class="row">
+					<div class="col-sm-6">
+						<input type="file" id="movie" class="form-control filestyle" accept="video/mp4,.mp4,
+						video/avi,.avi,
+						video/mpeg,.mpeg,.mpg,
+						video/3gpp,.3gp,.divx,
+						video/x-flv,.flv,
+						video/x-matroska,.mkv,
+						video/quicktime,.mov,
+						audio/ogg,.ogg,
+						video/webm,.webm,
+						video/x-ms-wmv,.wmv" data-text="Choose your video" data-input="false" data-btnClass="btn-primary">
+					</div>
+					<div class="col-sm-6">
+						<input type="file" name="subtitle" id="subtitle" class="form-control filestyle" data-input="false" data-text="Adding subtitle (.vtt)" data-btnClass="btn-primary" accept=".vtt">
+					</div>
+				</div>
+				<div class=" row text-center">
+					<button type="submit" class="btn text-center">Lire</button>	
+				</div>
+			</form>
+
+			<video id="player" width="100%" height="auto" controls autoplay>
+
+			</video>
+		</div>
+	</section>
+	<section id="why">
+		<div class="container">
+			<h1>Why use us</h1>
+			<p>
+				The chromecast device is a awesome device. <br>
+				But when you want to cast an video store on you device, you can only use some files ( mp4,...). 
+				With CastWatcher, you can play a large choices of video's type (mkv, ....). And you can adding subtitle.
+				CastWatcher read your video on local, we don't download the file. <br>
+				CastWatcher is open source, you can find use on <a href="https://github.com/philou69/watcher">github</a>
+			</p>
+		</div>
+	</div>
+</section>
+<script src="bootstrap/js/jquery.min.js"></script>
+<script src="bootstrap-filestyle/src/bootstrap-filestyle.js"></script>
+<script src="main.js"></script>
+</body>
 </html>
